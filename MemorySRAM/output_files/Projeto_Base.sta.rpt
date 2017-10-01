@@ -1,0 +1,1903 @@
+TimeQuest Timing Analyzer report for Projeto_Base
+Sun Oct 01 14:34:57 2017
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Output Enable Times
+ 21. Minimum Output Enable Times
+ 22. Output Disable Times
+ 23. Minimum Output Disable Times
+ 24. Fast Model Setup Summary
+ 25. Fast Model Hold Summary
+ 26. Fast Model Recovery Summary
+ 27. Fast Model Removal Summary
+ 28. Fast Model Minimum Pulse Width Summary
+ 29. Fast Model Setup: 'CLOCK_50'
+ 30. Fast Model Hold: 'CLOCK_50'
+ 31. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Propagation Delay
+ 37. Minimum Propagation Delay
+ 38. Output Enable Times
+ 39. Minimum Output Enable Times
+ 40. Output Disable Times
+ 41. Minimum Output Disable Times
+ 42. Multicorner Timing Analysis Summary
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Progagation Delay
+ 48. Minimum Progagation Delay
+ 49. Setup Transfers
+ 50. Hold Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Projeto_Base                                       ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 307.6 MHz ; 307.6 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -2.251 ; -57.999       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.445 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.631 ; -72.507            ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                       ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; -2.251 ; button3          ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.291      ;
+; -2.206 ; address21Bit[0]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.246      ;
+; -2.077 ; button3          ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.117      ;
+; -2.069 ; address21Bit[1]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.109      ;
+; -2.032 ; address21Bit[0]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.072      ;
+; -1.997 ; button3          ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 3.037      ;
+; -1.952 ; address21Bit[0]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.992      ;
+; -1.945 ; address21Bit[2]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.985      ;
+; -1.919 ; address21Bit[3]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.959      ;
+; -1.917 ; button3          ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.957      ;
+; -1.895 ; address21Bit[1]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.935      ;
+; -1.872 ; address21Bit[0]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.912      ;
+; -1.837 ; button3          ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.877      ;
+; -1.815 ; address21Bit[1]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.855      ;
+; -1.792 ; address21Bit[0]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.832      ;
+; -1.785 ; address21Bit[4]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.825      ;
+; -1.771 ; address21Bit[2]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.811      ;
+; -1.757 ; button3          ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.797      ;
+; -1.750 ; address21Bit[5]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.790      ;
+; -1.745 ; address21Bit[3]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.785      ;
+; -1.735 ; address21Bit[1]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.775      ;
+; -1.712 ; address21Bit[0]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.752      ;
+; -1.691 ; address21Bit[2]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.731      ;
+; -1.677 ; button3          ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.717      ;
+; -1.665 ; address21Bit[3]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.705      ;
+; -1.655 ; address21Bit[1]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.695      ;
+; -1.632 ; address21Bit[0]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.672      ;
+; -1.630 ; address21Bit[6]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.670      ;
+; -1.611 ; address21Bit[4]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.651      ;
+; -1.611 ; address21Bit[2]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.651      ;
+; -1.597 ; button3          ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.637      ;
+; -1.585 ; address21Bit[3]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.625      ;
+; -1.576 ; address21Bit[5]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.616      ;
+; -1.575 ; address21Bit[1]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.615      ;
+; -1.552 ; address21Bit[0]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.592      ;
+; -1.550 ; address21Bit[7]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.590      ;
+; -1.531 ; address21Bit[4]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.571      ;
+; -1.531 ; address21Bit[2]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.571      ;
+; -1.517 ; button3          ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.557      ;
+; -1.505 ; address21Bit[3]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.545      ;
+; -1.496 ; address21Bit[5]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.536      ;
+; -1.495 ; address21Bit[1]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.535      ;
+; -1.489 ; address21Bit[8]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.529      ;
+; -1.472 ; address21Bit[0]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.512      ;
+; -1.456 ; address21Bit[6]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.496      ;
+; -1.454 ; button2          ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.454 ; button2          ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.494      ;
+; -1.451 ; address21Bit[4]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.491      ;
+; -1.451 ; address21Bit[2]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.491      ;
+; -1.425 ; address21Bit[3]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.465      ;
+; -1.416 ; address21Bit[5]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.456      ;
+; -1.415 ; address21Bit[1]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.455      ;
+; -1.376 ; address21Bit[7]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.416      ;
+; -1.376 ; address21Bit[6]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.416      ;
+; -1.371 ; address21Bit[4]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.411      ;
+; -1.371 ; address21Bit[2]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.411      ;
+; -1.358 ; button3          ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.396      ;
+; -1.345 ; address21Bit[3]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.385      ;
+; -1.336 ; address21Bit[5]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.376      ;
+; -1.335 ; address21Bit[1]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.375      ;
+; -1.315 ; address21Bit[8]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.355      ;
+; -1.313 ; address21Bit[0]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.351      ;
+; -1.302 ; address21Bit[9]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.340      ;
+; -1.296 ; address21Bit[7]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.336      ;
+; -1.296 ; address21Bit[6]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.336      ;
+; -1.291 ; address21Bit[4]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.331      ;
+; -1.291 ; address21Bit[2]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.331      ;
+; -1.278 ; button3          ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.316      ;
+; -1.265 ; address21Bit[3]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.305      ;
+; -1.256 ; address21Bit[5]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.296      ;
+; -1.235 ; address21Bit[8]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.275      ;
+; -1.233 ; address21Bit[0]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.271      ;
+; -1.222 ; address21Bit[10] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.260      ;
+; -1.216 ; address21Bit[7]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.256      ;
+; -1.216 ; address21Bit[6]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.256      ;
+; -1.211 ; address21Bit[4]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.251      ;
+; -1.211 ; address21Bit[2]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.251      ;
+; -1.198 ; button3          ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.236      ;
+; -1.185 ; address21Bit[3]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.225      ;
+; -1.176 ; address21Bit[5]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.216      ;
+; -1.176 ; address21Bit[1]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.214      ;
+; -1.155 ; address21Bit[8]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.195      ;
+; -1.153 ; address21Bit[0]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.191      ;
+; -1.150 ; address21Bit[11] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.188      ;
+; -1.136 ; address21Bit[7]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.176      ;
+; -1.136 ; address21Bit[6]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.176      ;
+; -1.131 ; address21Bit[4]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.171      ;
+; -1.128 ; address21Bit[9]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.166      ;
+; -1.118 ; button3          ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.156      ;
+; -1.111 ; address21Bit[12] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.149      ;
+; -1.096 ; address21Bit[5]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.136      ;
+; -1.096 ; address21Bit[1]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.134      ;
+; -1.075 ; address21Bit[8]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.115      ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                       ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; button0          ; button0          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; button1          ; button1          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.967 ; address21Bit[0]  ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.253      ;
+; 0.968 ; address21Bit[9]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; address21Bit[10] ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
+; 0.972 ; address21Bit[2]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.258      ;
+; 0.972 ; address21Bit[4]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.258      ;
+; 0.976 ; address21Bit[11] ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; address21Bit[6]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; address21Bit[7]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; address21Bit[8]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; address21Bit[13] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; address21Bit[16] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.984 ; button3          ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.270      ;
+; 1.006 ; address21Bit[17] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.292      ;
+; 1.015 ; address21Bit[1]  ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.301      ;
+; 1.016 ; address21Bit[5]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; address21Bit[12] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; address21Bit[14] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; address21Bit[15] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.025 ; address21Bit[3]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.311      ;
+; 1.396 ; button2          ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; button2          ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.682      ;
+; 1.400 ; address21Bit[9]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.686      ;
+; 1.400 ; address21Bit[10] ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.686      ;
+; 1.404 ; address21Bit[4]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.690      ;
+; 1.404 ; address21Bit[2]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.690      ;
+; 1.408 ; address21Bit[11] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.694      ;
+; 1.409 ; address21Bit[6]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; address21Bit[7]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; address21Bit[13] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.695      ;
+; 1.448 ; address21Bit[1]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.734      ;
+; 1.449 ; address21Bit[5]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; address21Bit[12] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; address21Bit[15] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; address21Bit[14] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.735      ;
+; 1.458 ; address21Bit[3]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.744      ;
+; 1.480 ; address21Bit[9]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.766      ;
+; 1.480 ; address21Bit[10] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.766      ;
+; 1.484 ; address21Bit[4]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.770      ;
+; 1.484 ; address21Bit[2]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.770      ;
+; 1.488 ; address21Bit[11] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.774      ;
+; 1.489 ; address21Bit[6]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.775      ;
+; 1.489 ; address21Bit[13] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.775      ;
+; 1.505 ; address21Bit[0]  ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.791      ;
+; 1.507 ; address21Bit[8]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.795      ;
+; 1.510 ; address21Bit[16] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.796      ;
+; 1.528 ; address21Bit[1]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.814      ;
+; 1.529 ; address21Bit[5]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; address21Bit[12] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; address21Bit[14] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.815      ;
+; 1.538 ; address21Bit[3]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.824      ;
+; 1.543 ; button0          ; LEDG[0]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[1]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[2]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[3]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[4]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[5]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[6]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.543 ; button0          ; LEDG[7]~reg0     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.829      ;
+; 1.550 ; button3          ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.836      ;
+; 1.560 ; address21Bit[9]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.846      ;
+; 1.560 ; address21Bit[10] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.846      ;
+; 1.564 ; address21Bit[4]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.850      ;
+; 1.564 ; address21Bit[2]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.850      ;
+; 1.568 ; address21Bit[7]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.856      ;
+; 1.568 ; address21Bit[11] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.854      ;
+; 1.569 ; address21Bit[13] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.855      ;
+; 1.585 ; address21Bit[0]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.871      ;
+; 1.587 ; address21Bit[8]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.875      ;
+; 1.608 ; address21Bit[1]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.894      ;
+; 1.609 ; address21Bit[5]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; address21Bit[12] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.895      ;
+; 1.618 ; address21Bit[3]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.904      ;
+; 1.623 ; address21Bit[15] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.909      ;
+; 1.630 ; button3          ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.916      ;
+; 1.640 ; address21Bit[9]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.926      ;
+; 1.640 ; address21Bit[10] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.926      ;
+; 1.644 ; address21Bit[4]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.930      ;
+; 1.644 ; address21Bit[2]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.930      ;
+; 1.648 ; address21Bit[6]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.936      ;
+; 1.648 ; address21Bit[7]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.936      ;
+; 1.648 ; address21Bit[11] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.934      ;
+; 1.665 ; address21Bit[0]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.951      ;
+; 1.667 ; address21Bit[8]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.002      ; 1.955      ;
+; 1.688 ; address21Bit[1]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.974      ;
+; 1.689 ; address21Bit[12] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.975      ;
+; 1.698 ; address21Bit[3]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.984      ;
+; 1.703 ; address21Bit[14] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.989      ;
+; 1.710 ; button3          ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.996      ;
+; 1.720 ; address21Bit[9]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.006      ;
+; 1.720 ; address21Bit[10] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.006      ;
+; 1.724 ; address21Bit[2]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.010      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[7]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[7]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[10]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[10]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[11]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[11]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[12]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[12]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[13]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[13]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[14]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[14]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[15]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[15]~en   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~en    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_OE_N~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_OE_N~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_WE_N~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_WE_N~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[5]  ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; 6.839  ; 6.839  ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; 6.141  ; 6.141  ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; 6.286  ; 6.286  ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; 6.839  ; 6.839  ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; 6.705  ; 6.705  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; 4.071  ; 4.071  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.987  ; 3.987  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 4.071  ; 4.071  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.713  ; 3.713  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.728  ; 3.728  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.658  ; 3.658  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.617  ; 3.617  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.782  ; 3.782  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.764  ; 3.764  ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 4.520  ; 4.520  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; 0.609  ; 0.609  ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; 0.811  ; 0.811  ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; 0.652  ; 0.652  ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; 0.212  ; 0.212  ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; -0.034 ; -0.034 ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; 0.219  ; 0.219  ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; 0.151  ; 0.151  ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; 0.929  ; 0.929  ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 4.324  ; 4.324  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; 4.520  ; 4.520  ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; -4.619 ; -4.619 ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; -4.691 ; -4.691 ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; -5.150 ; -5.150 ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; -5.015 ; -5.015 ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; -4.619 ; -4.619 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; -3.369 ; -3.369 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; -3.739 ; -3.739 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; -3.823 ; -3.823 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; -3.465 ; -3.465 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; -3.480 ; -3.480 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; -3.410 ; -3.410 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; -3.369 ; -3.369 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; -3.534 ; -3.534 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; -3.516 ; -3.516 ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 0.282  ; 0.282  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; -0.361 ; -0.361 ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; -0.563 ; -0.563 ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; -0.404 ; -0.404 ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; 0.036  ; 0.036  ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; 0.282  ; 0.282  ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; 0.029  ; 0.029  ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; 0.097  ; 0.097  ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; -0.681 ; -0.681 ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 0.074  ; 0.074  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; -0.583 ; -0.583 ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 10.689 ; 10.689 ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 9.140  ; 9.140  ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 9.289  ; 9.289  ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 10.353 ; 10.353 ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 10.689 ; 10.689 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 10.141 ; 10.141 ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 10.342 ; 10.342 ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 9.646  ; 9.646  ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 9.982  ; 9.982  ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 9.982  ; 9.982  ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 9.604  ; 9.604  ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 9.572  ; 9.572  ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 9.614  ; 9.614  ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 9.624  ; 9.624  ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 9.946  ; 9.946  ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 9.871  ; 9.871  ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 9.764  ; 9.764  ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 8.925  ; 8.925  ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 8.570  ; 8.570  ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 8.971  ; 8.971  ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 8.581  ; 8.581  ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 8.671  ; 8.671  ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 8.340  ; 8.340  ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 9.136  ; 9.136  ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 9.764  ; 9.764  ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 8.649  ; 8.649  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 7.223  ; 7.223  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 7.232  ; 7.232  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 7.211  ; 7.211  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 7.208  ; 7.208  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 6.940  ; 6.940  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 8.319  ; 8.319  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 8.582  ; 8.582  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 8.649  ; 8.649  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 8.289  ; 8.289  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 8.257  ; 8.257  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 7.995  ; 7.995  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 8.003  ; 8.003  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 7.715  ; 7.715  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 7.672  ; 7.672  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 7.764  ; 7.764  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 6.891  ; 6.891  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 6.915  ; 6.915  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 6.898  ; 6.898  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 7.401  ; 7.401  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 7.167  ; 7.167  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 7.180  ; 7.180  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 7.170  ; 7.170  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 7.175  ; 7.175  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 6.900  ; 6.900  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 6.888  ; 6.888  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 7.179  ; 7.179  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 7.185  ; 7.185  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 7.148  ; 7.148  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 7.146  ; 7.146  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 7.130  ; 7.130  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 6.867  ; 6.867  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 6.885  ; 6.885  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 7.142  ; 7.142  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 7.159  ; 7.159  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 7.401  ; 7.401  ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 7.411  ; 7.411  ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 7.455  ; 7.455  ; Fall       ; CLOCK_50        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 9.004  ; 9.004  ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 9.004  ; 9.004  ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 9.154  ; 9.154  ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 9.772  ; 9.772  ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 10.107 ; 10.107 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 9.559  ; 9.559  ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 9.794  ; 9.794  ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 9.510  ; 9.510  ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 8.981  ; 8.981  ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 9.353  ; 9.353  ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 8.981  ; 8.981  ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 8.982  ; 8.982  ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 8.990  ; 8.990  ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 9.000  ; 9.000  ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 9.364  ; 9.364  ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 9.236  ; 9.236  ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 8.340  ; 8.340  ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 8.925  ; 8.925  ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 8.570  ; 8.570  ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 8.971  ; 8.971  ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 8.581  ; 8.581  ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 8.671  ; 8.671  ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 8.340  ; 8.340  ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 9.136  ; 9.136  ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 9.764  ; 9.764  ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 6.891  ; 6.891  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 7.223  ; 7.223  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 7.232  ; 7.232  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 7.211  ; 7.211  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 7.208  ; 7.208  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 6.940  ; 6.940  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 8.319  ; 8.319  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 8.582  ; 8.582  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 8.649  ; 8.649  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 8.289  ; 8.289  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 8.257  ; 8.257  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 7.995  ; 7.995  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 8.003  ; 8.003  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 7.715  ; 7.715  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 7.672  ; 7.672  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 7.764  ; 7.764  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 6.891  ; 6.891  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 6.915  ; 6.915  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 6.898  ; 6.898  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 6.867  ; 6.867  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 7.167  ; 7.167  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 7.180  ; 7.180  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 7.170  ; 7.170  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 7.175  ; 7.175  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 6.900  ; 6.900  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 6.888  ; 6.888  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 7.179  ; 7.179  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 7.185  ; 7.185  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 7.148  ; 7.148  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 7.146  ; 7.146  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 7.130  ; 7.130  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 6.867  ; 6.867  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 6.885  ; 6.885  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 7.142  ; 7.142  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 7.159  ; 7.159  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 7.401  ; 7.401  ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 7.411  ; 7.411  ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 7.455  ; 7.455  ; Fall       ; CLOCK_50        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 4.635 ;    ;    ; 4.635 ;
+; SW[1]      ; LEDR[1]     ; 4.978 ;    ;    ; 4.978 ;
+; SW[2]      ; LEDR[2]     ; 5.387 ;    ;    ; 5.387 ;
+; SW[3]      ; LEDR[3]     ; 5.682 ;    ;    ; 5.682 ;
+; SW[4]      ; LEDR[4]     ; 5.692 ;    ;    ; 5.692 ;
+; SW[5]      ; LEDR[5]     ; 5.186 ;    ;    ; 5.186 ;
+; SW[6]      ; LEDR[6]     ; 5.520 ;    ;    ; 5.520 ;
+; SW[7]      ; LEDR[7]     ; 6.692 ;    ;    ; 6.692 ;
+; SW[8]      ; HEX2[0]     ; 5.288 ;    ;    ; 5.288 ;
+; SW[8]      ; HEX2[3]     ; 5.342 ;    ;    ; 5.342 ;
+; SW[8]      ; HEX2[4]     ; 5.332 ;    ;    ; 5.332 ;
+; SW[8]      ; HEX2[5]     ; 5.322 ;    ;    ; 5.322 ;
+; SW[8]      ; LEDR[8]     ; 6.338 ;    ;    ; 6.338 ;
+; SW[9]      ; HEX3[0]     ; 5.344 ;    ;    ; 5.344 ;
+; SW[9]      ; HEX3[3]     ; 4.958 ;    ;    ; 4.958 ;
+; SW[9]      ; HEX3[4]     ; 4.968 ;    ;    ; 4.968 ;
+; SW[9]      ; HEX3[5]     ; 5.345 ;    ;    ; 5.345 ;
+; SW[9]      ; LEDR[9]     ; 6.400 ;    ;    ; 6.400 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 4.635 ;    ;    ; 4.635 ;
+; SW[1]      ; LEDR[1]     ; 4.978 ;    ;    ; 4.978 ;
+; SW[2]      ; LEDR[2]     ; 5.387 ;    ;    ; 5.387 ;
+; SW[3]      ; LEDR[3]     ; 5.682 ;    ;    ; 5.682 ;
+; SW[4]      ; LEDR[4]     ; 5.692 ;    ;    ; 5.692 ;
+; SW[5]      ; LEDR[5]     ; 5.186 ;    ;    ; 5.186 ;
+; SW[6]      ; LEDR[6]     ; 5.520 ;    ;    ; 5.520 ;
+; SW[7]      ; LEDR[7]     ; 6.692 ;    ;    ; 6.692 ;
+; SW[8]      ; HEX2[0]     ; 5.288 ;    ;    ; 5.288 ;
+; SW[8]      ; HEX2[3]     ; 5.342 ;    ;    ; 5.342 ;
+; SW[8]      ; HEX2[4]     ; 5.332 ;    ;    ; 5.332 ;
+; SW[8]      ; HEX2[5]     ; 5.322 ;    ;    ; 5.322 ;
+; SW[8]      ; LEDR[8]     ; 6.338 ;    ;    ; 6.338 ;
+; SW[9]      ; HEX3[0]     ; 5.344 ;    ;    ; 5.344 ;
+; SW[9]      ; HEX3[3]     ; 4.958 ;    ;    ; 4.958 ;
+; SW[9]      ; HEX3[4]     ; 4.968 ;    ;    ; 4.968 ;
+; SW[9]      ; HEX3[5]     ; 5.345 ;    ;    ; 5.345 ;
+; SW[9]      ; LEDR[9]     ; 6.400 ;    ;    ; 6.400 ;
++------------+-------------+-------+----+----+-------+
+
+
++------------------------------------------------------------------------+
+; Output Enable Times                                                    ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 6.835 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 7.125 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 7.142 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 7.122 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 7.129 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 6.843 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 6.842 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 7.145 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 7.153 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 6.839 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 6.835 ;      ; Fall       ; CLOCK_50        ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Output Enable Times                                            ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 6.835 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 7.125 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 7.142 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 7.122 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 7.129 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 6.843 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 6.842 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 7.145 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 7.153 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 6.839 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 6.835 ;      ; Fall       ; CLOCK_50        ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Output Disable Times                                                            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 6.835     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 7.125     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 7.142     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 7.122     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 7.129     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 6.843     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 6.842     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 7.145     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 7.153     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 6.839     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 6.835     ;           ; Fall       ; CLOCK_50        ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                    ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 6.835     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 7.125     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 7.142     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 7.122     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 7.129     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 6.843     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 6.842     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 7.145     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 7.153     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 6.839     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 6.835     ;           ; Fall       ; CLOCK_50        ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -0.357 ; -1.481        ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -59.380            ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                       ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; -0.357 ; button3          ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.390      ;
+; -0.341 ; address21Bit[0]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.374      ;
+; -0.266 ; address21Bit[1]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.299      ;
+; -0.263 ; button3          ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.296      ;
+; -0.247 ; address21Bit[0]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.280      ;
+; -0.228 ; button3          ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.261      ;
+; -0.216 ; address21Bit[2]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.249      ;
+; -0.212 ; address21Bit[0]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.245      ;
+; -0.199 ; address21Bit[3]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.232      ;
+; -0.193 ; button3          ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.226      ;
+; -0.177 ; address21Bit[0]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.210      ;
+; -0.172 ; address21Bit[1]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.205      ;
+; -0.158 ; button3          ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.191      ;
+; -0.146 ; address21Bit[4]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.179      ;
+; -0.142 ; address21Bit[0]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.175      ;
+; -0.137 ; address21Bit[1]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.170      ;
+; -0.127 ; address21Bit[5]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.160      ;
+; -0.123 ; button3          ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.156      ;
+; -0.122 ; address21Bit[2]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.155      ;
+; -0.107 ; address21Bit[0]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.140      ;
+; -0.105 ; address21Bit[3]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.138      ;
+; -0.102 ; address21Bit[1]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.135      ;
+; -0.088 ; button3          ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.121      ;
+; -0.087 ; address21Bit[2]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.120      ;
+; -0.079 ; address21Bit[6]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.112      ;
+; -0.072 ; address21Bit[0]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.105      ;
+; -0.070 ; address21Bit[3]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.103      ;
+; -0.067 ; address21Bit[1]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.100      ;
+; -0.053 ; button3          ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.086      ;
+; -0.052 ; address21Bit[4]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.085      ;
+; -0.052 ; address21Bit[2]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.085      ;
+; -0.044 ; address21Bit[7]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.077      ;
+; -0.037 ; address21Bit[0]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.070      ;
+; -0.035 ; address21Bit[3]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.068      ;
+; -0.033 ; address21Bit[5]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.066      ;
+; -0.032 ; address21Bit[1]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.065      ;
+; -0.018 ; button3          ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.018 ; button2          ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.051      ;
+; -0.017 ; address21Bit[4]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.050      ;
+; -0.017 ; address21Bit[2]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.050      ;
+; -0.004 ; address21Bit[8]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.037      ;
+; -0.002 ; address21Bit[0]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.035      ;
+; 0.000  ; address21Bit[3]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.033      ;
+; 0.002  ; address21Bit[5]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.031      ;
+; 0.003  ; address21Bit[1]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.030      ;
+; 0.015  ; address21Bit[6]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.018      ;
+; 0.018  ; address21Bit[4]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.015      ;
+; 0.018  ; address21Bit[2]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.015      ;
+; 0.035  ; address21Bit[3]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.998      ;
+; 0.037  ; address21Bit[5]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.996      ;
+; 0.038  ; address21Bit[1]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.995      ;
+; 0.050  ; address21Bit[7]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.983      ;
+; 0.050  ; address21Bit[6]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.983      ;
+; 0.053  ; address21Bit[4]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.980      ;
+; 0.053  ; address21Bit[2]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.980      ;
+; 0.068  ; button3          ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.964      ;
+; 0.070  ; address21Bit[3]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.963      ;
+; 0.072  ; address21Bit[5]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.961      ;
+; 0.073  ; address21Bit[1]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.960      ;
+; 0.083  ; address21Bit[9]  ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.949      ;
+; 0.084  ; address21Bit[0]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.948      ;
+; 0.085  ; address21Bit[7]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.948      ;
+; 0.085  ; address21Bit[6]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.948      ;
+; 0.088  ; address21Bit[4]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.945      ;
+; 0.088  ; address21Bit[2]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.945      ;
+; 0.090  ; address21Bit[8]  ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.943      ;
+; 0.103  ; button3          ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.929      ;
+; 0.105  ; address21Bit[3]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.928      ;
+; 0.107  ; address21Bit[5]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.926      ;
+; 0.118  ; address21Bit[10] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.914      ;
+; 0.119  ; address21Bit[0]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.913      ;
+; 0.120  ; address21Bit[7]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.913      ;
+; 0.120  ; address21Bit[6]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.913      ;
+; 0.123  ; address21Bit[4]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.910      ;
+; 0.123  ; address21Bit[2]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.910      ;
+; 0.124  ; button1          ; SRAM_DQ[2]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[3]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[4]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[4]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[5]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[5]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[6]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[6]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[7]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[7]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[8]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.124  ; button1          ; SRAM_DQ[9]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 0.895      ;
+; 0.125  ; address21Bit[8]  ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 0.908      ;
+; 0.127  ; button1          ; SRAM_DQ[0]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 0.904      ;
+; 0.127  ; button1          ; SRAM_DQ[0]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 0.904      ;
+; 0.127  ; button1          ; SRAM_DQ[1]~reg0  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 0.904      ;
+; 0.127  ; button1          ; SRAM_DQ[1]~en    ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 0.904      ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                       ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; button0          ; button0          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; button1          ; button1          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.355 ; address21Bit[9]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; address21Bit[10] ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.358 ; address21Bit[0]  ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; address21Bit[2]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; address21Bit[4]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; address21Bit[11] ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; address21Bit[6]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; address21Bit[7]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; address21Bit[8]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; address21Bit[13] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; address21Bit[16] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.366 ; address21Bit[17] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.371 ; address21Bit[1]  ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; address21Bit[12] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; address21Bit[5]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; address21Bit[14] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; address21Bit[15] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; button3          ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; address21Bit[3]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.493 ; address21Bit[9]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; address21Bit[10] ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.496 ; address21Bit[4]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; address21Bit[2]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.498 ; address21Bit[11] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; address21Bit[6]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; address21Bit[7]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; address21Bit[13] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.511 ; address21Bit[1]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; address21Bit[12] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; address21Bit[5]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; address21Bit[15] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; address21Bit[14] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.514 ; address21Bit[3]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.528 ; address21Bit[9]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; address21Bit[10] ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.680      ;
+; 0.531 ; address21Bit[4]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; address21Bit[2]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.683      ;
+; 0.533 ; address21Bit[11] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; address21Bit[6]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; address21Bit[13] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.545 ; address21Bit[8]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.698      ;
+; 0.546 ; address21Bit[1]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; address21Bit[12] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; address21Bit[5]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; address21Bit[14] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; address21Bit[3]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551 ; address21Bit[0]  ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.554 ; address21Bit[16] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.706      ;
+; 0.563 ; address21Bit[9]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563 ; address21Bit[10] ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.715      ;
+; 0.566 ; address21Bit[4]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566 ; address21Bit[2]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; button3          ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; address21Bit[11] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; address21Bit[13] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.721      ;
+; 0.580 ; address21Bit[8]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.733      ;
+; 0.581 ; address21Bit[1]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; address21Bit[12] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; address21Bit[5]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.734      ;
+; 0.584 ; address21Bit[3]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.736      ;
+; 0.585 ; address21Bit[7]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.738      ;
+; 0.586 ; address21Bit[0]  ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.738      ;
+; 0.598 ; address21Bit[9]  ; address21Bit[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.750      ;
+; 0.598 ; address21Bit[10] ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.750      ;
+; 0.600 ; button2          ; address21Bit[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600 ; button2          ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.752      ;
+; 0.601 ; address21Bit[4]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.753      ;
+; 0.601 ; address21Bit[2]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.753      ;
+; 0.602 ; button3          ; address21Bit[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603 ; address21Bit[11] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.755      ;
+; 0.606 ; address21Bit[15] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.758      ;
+; 0.615 ; address21Bit[8]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.768      ;
+; 0.616 ; address21Bit[1]  ; address21Bit[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; address21Bit[12] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.768      ;
+; 0.619 ; address21Bit[3]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.771      ;
+; 0.620 ; address21Bit[7]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.773      ;
+; 0.620 ; address21Bit[6]  ; address21Bit[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.773      ;
+; 0.621 ; address21Bit[0]  ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.773      ;
+; 0.633 ; address21Bit[9]  ; address21Bit[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.633 ; address21Bit[10] ; address21Bit[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.636 ; address21Bit[2]  ; address21Bit[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.788      ;
+; 0.637 ; button3          ; address21Bit[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.638 ; address21Bit[11] ; address21Bit[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.641 ; address21Bit[14] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.650 ; address21Bit[8]  ; address21Bit[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.803      ;
+; 0.651 ; address21Bit[1]  ; address21Bit[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.803      ;
+; 0.654 ; address21Bit[3]  ; address21Bit[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.806      ;
+; 0.655 ; address21Bit[7]  ; address21Bit[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.808      ;
+; 0.655 ; address21Bit[6]  ; address21Bit[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.808      ;
+; 0.656 ; address21Bit[0]  ; address21Bit[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.808      ;
+; 0.663 ; address21Bit[13] ; address21Bit[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.815      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; LEDG[7]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; LEDG[7]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[0]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[10]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[10]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[11]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[11]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[12]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[12]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[13]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[13]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[14]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[14]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[15]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[15]~en   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[2]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[4]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[6]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[8]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~en    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_DQ[9]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_OE_N~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_OE_N~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; SRAM_WE_N~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; SRAM_WE_N~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Fall       ; address21Bit[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Fall       ; address21Bit[5]  ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; 3.040  ; 3.040  ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; 2.823  ; 2.823  ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; 2.890  ; 2.890  ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; 3.040  ; 3.040  ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; 2.999  ; 2.999  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; 1.805  ; 1.805  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 1.776  ; 1.776  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 1.805  ; 1.805  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 1.650  ; 1.650  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 1.663  ; 1.663  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 1.685  ; 1.685  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 1.681  ; 1.681  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 1.689  ; 1.689  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 1.684  ; 1.684  ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 1.263  ; 1.263  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; -0.192 ; -0.192 ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; -0.074 ; -0.074 ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; -0.190 ; -0.190 ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; -0.446 ; -0.446 ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; -0.546 ; -0.546 ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; -0.397 ; -0.397 ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; -0.486 ; -0.486 ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; -0.105 ; -0.105 ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 1.256  ; 1.256  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; 1.263  ; 1.263  ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; -2.147 ; -2.147 ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; -2.147 ; -2.147 ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; -2.331 ; -2.331 ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; -2.265 ; -2.265 ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; -2.150 ; -2.150 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; -1.530 ; -1.530 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; -1.656 ; -1.656 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; -1.685 ; -1.685 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; -1.530 ; -1.530 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; -1.543 ; -1.543 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; -1.565 ; -1.565 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; -1.561 ; -1.561 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; -1.569 ; -1.569 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; -1.564 ; -1.564 ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 0.666  ; 0.666  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; 0.312  ; 0.312  ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; 0.194  ; 0.194  ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; 0.310  ; 0.310  ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; 0.566  ; 0.566  ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; 0.666  ; 0.666  ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; 0.517  ; 0.517  ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; 0.606  ; 0.606  ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; 0.225  ; 0.225  ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 0.539  ; 0.539  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; 0.288  ; 0.288  ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 5.246 ; 5.246 ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 4.612 ; 4.612 ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 4.696 ; 4.696 ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 5.103 ; 5.103 ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 5.246 ; 5.246 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 5.015 ; 5.015 ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 5.109 ; 5.109 ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 4.842 ; 4.842 ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 4.982 ; 4.982 ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 4.977 ; 4.977 ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 4.808 ; 4.808 ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 4.815 ; 4.815 ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 4.820 ; 4.820 ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 4.830 ; 4.830 ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 4.982 ; 4.982 ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 4.927 ; 4.927 ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 4.880 ; 4.880 ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 4.578 ; 4.578 ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 4.472 ; 4.472 ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 4.602 ; 4.602 ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 4.468 ; 4.468 ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 4.495 ; 4.495 ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 4.362 ; 4.362 ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 4.639 ; 4.639 ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 4.880 ; 4.880 ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 4.447 ; 4.447 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 3.912 ; 3.912 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 3.916 ; 3.916 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 3.904 ; 3.904 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 3.900 ; 3.900 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 3.804 ; 3.804 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 4.314 ; 4.314 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 4.409 ; 4.409 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 4.447 ; 4.447 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 4.284 ; 4.284 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 4.269 ; 4.269 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 4.167 ; 4.167 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 4.181 ; 4.181 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 4.073 ; 4.073 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 4.083 ; 4.083 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 4.104 ; 4.104 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 3.784 ; 3.784 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 3.776 ; 3.776 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 3.945 ; 3.945 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 3.879 ; 3.879 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 3.890 ; 3.890 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 3.878 ; 3.878 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 3.886 ; 3.886 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 3.778 ; 3.778 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 3.773 ; 3.773 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 3.881 ; 3.881 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 3.888 ; 3.888 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 3.857 ; 3.857 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 3.844 ; 3.844 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 3.750 ; 3.750 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 3.865 ; 3.865 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 3.945 ; 3.945 ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 3.955 ; 3.955 ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 3.989 ; 3.989 ; Fall       ; CLOCK_50        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 4.564 ; 4.564 ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 4.564 ; 4.564 ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 4.648 ; 4.648 ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 4.887 ; 4.887 ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 5.035 ; 5.035 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 4.810 ; 4.810 ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 4.898 ; 4.898 ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 4.794 ; 4.794 ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 4.587 ; 4.587 ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 4.747 ; 4.747 ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 4.587 ; 4.587 ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 4.588 ; 4.588 ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 4.599 ; 4.599 ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 4.606 ; 4.606 ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 4.756 ; 4.756 ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 4.698 ; 4.698 ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 4.362 ; 4.362 ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 4.578 ; 4.578 ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 4.472 ; 4.472 ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 4.602 ; 4.602 ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 4.468 ; 4.468 ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 4.495 ; 4.495 ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 4.362 ; 4.362 ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 4.639 ; 4.639 ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 4.880 ; 4.880 ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 3.912 ; 3.912 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 3.916 ; 3.916 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 3.904 ; 3.904 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 3.900 ; 3.900 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 3.804 ; 3.804 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 4.314 ; 4.314 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 4.409 ; 4.409 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 4.447 ; 4.447 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 4.284 ; 4.284 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 4.269 ; 4.269 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 4.167 ; 4.167 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 4.181 ; 4.181 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 4.073 ; 4.073 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 4.083 ; 4.083 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 4.104 ; 4.104 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 3.784 ; 3.784 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 3.776 ; 3.776 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 3.750 ; 3.750 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 3.879 ; 3.879 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 3.890 ; 3.890 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 3.878 ; 3.878 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 3.886 ; 3.886 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 3.778 ; 3.778 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 3.773 ; 3.773 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 3.881 ; 3.881 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 3.888 ; 3.888 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 3.857 ; 3.857 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 3.844 ; 3.844 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 3.750 ; 3.750 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 3.865 ; 3.865 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 3.945 ; 3.945 ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 3.955 ; 3.955 ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 3.989 ; 3.989 ; Fall       ; CLOCK_50        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 2.289 ;    ;    ; 2.289 ;
+; SW[1]      ; LEDR[1]     ; 2.423 ;    ;    ; 2.423 ;
+; SW[2]      ; LEDR[2]     ; 2.611 ;    ;    ; 2.611 ;
+; SW[3]      ; LEDR[3]     ; 2.778 ;    ;    ; 2.778 ;
+; SW[4]      ; LEDR[4]     ; 2.790 ;    ;    ; 2.790 ;
+; SW[5]      ; LEDR[5]     ; 2.537 ;    ;    ; 2.537 ;
+; SW[6]      ; LEDR[6]     ; 2.659 ;    ;    ; 2.659 ;
+; SW[7]      ; LEDR[7]     ; 3.248 ;    ;    ; 3.248 ;
+; SW[8]      ; HEX2[0]     ; 2.599 ;    ;    ; 2.599 ;
+; SW[8]      ; HEX2[3]     ; 2.651 ;    ;    ; 2.651 ;
+; SW[8]      ; HEX2[4]     ; 2.640 ;    ;    ; 2.640 ;
+; SW[8]      ; HEX2[5]     ; 2.630 ;    ;    ; 2.630 ;
+; SW[8]      ; LEDR[8]     ; 3.013 ;    ;    ; 3.013 ;
+; SW[9]      ; HEX3[0]     ; 2.643 ;    ;    ; 2.643 ;
+; SW[9]      ; HEX3[3]     ; 2.471 ;    ;    ; 2.471 ;
+; SW[9]      ; HEX3[4]     ; 2.476 ;    ;    ; 2.476 ;
+; SW[9]      ; HEX3[5]     ; 2.645 ;    ;    ; 2.645 ;
+; SW[9]      ; LEDR[9]     ; 3.058 ;    ;    ; 3.058 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 2.289 ;    ;    ; 2.289 ;
+; SW[1]      ; LEDR[1]     ; 2.423 ;    ;    ; 2.423 ;
+; SW[2]      ; LEDR[2]     ; 2.611 ;    ;    ; 2.611 ;
+; SW[3]      ; LEDR[3]     ; 2.778 ;    ;    ; 2.778 ;
+; SW[4]      ; LEDR[4]     ; 2.790 ;    ;    ; 2.790 ;
+; SW[5]      ; LEDR[5]     ; 2.537 ;    ;    ; 2.537 ;
+; SW[6]      ; LEDR[6]     ; 2.659 ;    ;    ; 2.659 ;
+; SW[7]      ; LEDR[7]     ; 3.248 ;    ;    ; 3.248 ;
+; SW[8]      ; HEX2[0]     ; 2.599 ;    ;    ; 2.599 ;
+; SW[8]      ; HEX2[3]     ; 2.651 ;    ;    ; 2.651 ;
+; SW[8]      ; HEX2[4]     ; 2.640 ;    ;    ; 2.640 ;
+; SW[8]      ; HEX2[5]     ; 2.630 ;    ;    ; 2.630 ;
+; SW[8]      ; LEDR[8]     ; 3.013 ;    ;    ; 3.013 ;
+; SW[9]      ; HEX3[0]     ; 2.643 ;    ;    ; 2.643 ;
+; SW[9]      ; HEX3[3]     ; 2.471 ;    ;    ; 2.471 ;
+; SW[9]      ; HEX3[4]     ; 2.476 ;    ;    ; 2.476 ;
+; SW[9]      ; HEX3[5]     ; 2.645 ;    ;    ; 2.645 ;
+; SW[9]      ; LEDR[9]     ; 3.058 ;    ;    ; 3.058 ;
++------------+-------------+-------+----+----+-------+
+
+
++------------------------------------------------------------------------+
+; Output Enable Times                                                    ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 3.730 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.849 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 3.861 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.846 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.854 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.741 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.740 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.855 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.864 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 3.731 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 3.730 ;      ; Fall       ; CLOCK_50        ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Output Enable Times                                            ;
++-------------+------------+-------+------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 3.730 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.849 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 3.861 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.846 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.854 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.741 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.740 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.855 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.864 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 3.731 ;      ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 3.730 ;      ; Fall       ; CLOCK_50        ;
++-------------+------------+-------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Output Disable Times                                                            ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 3.730     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.849     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 3.861     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.846     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.854     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.741     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.740     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.855     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.864     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 3.731     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 3.730     ;           ; Fall       ; CLOCK_50        ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                    ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; Data Port   ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-------------+------------+-----------+-----------+------------+-----------------+
+; SRAM_DQ[*]  ; CLOCK_50   ; 3.730     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.849     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 3.861     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.846     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.854     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.741     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.740     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.855     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.864     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8] ; CLOCK_50   ; 3.731     ;           ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9] ; CLOCK_50   ; 3.730     ;           ; Fall       ; CLOCK_50        ;
++-------------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.251  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  CLOCK_50        ; -2.251  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -57.999 ; 0.0   ; 0.0      ; 0.0     ; -72.507             ;
+;  CLOCK_50        ; -57.999 ; 0.000 ; N/A      ; N/A     ; -72.507             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; 6.839  ; 6.839  ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; 6.141  ; 6.141  ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; 6.286  ; 6.286  ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; 6.839  ; 6.839  ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; 6.705  ; 6.705  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; 4.071  ; 4.071  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; 3.987  ; 3.987  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; 4.071  ; 4.071  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; 3.713  ; 3.713  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; 3.728  ; 3.728  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; 3.658  ; 3.658  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; 3.617  ; 3.617  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; 3.782  ; 3.782  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; 3.764  ; 3.764  ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 4.520  ; 4.520  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; 0.609  ; 0.609  ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; 0.811  ; 0.811  ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; 0.652  ; 0.652  ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; 0.212  ; 0.212  ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; -0.034 ; -0.034 ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; 0.219  ; 0.219  ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; 0.151  ; 0.151  ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; 0.929  ; 0.929  ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 4.324  ; 4.324  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; 4.520  ; 4.520  ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; KEY[*]      ; CLOCK_50   ; -2.147 ; -2.147 ; Fall       ; CLOCK_50        ;
+;  KEY[0]     ; CLOCK_50   ; -2.147 ; -2.147 ; Fall       ; CLOCK_50        ;
+;  KEY[1]     ; CLOCK_50   ; -2.331 ; -2.331 ; Fall       ; CLOCK_50        ;
+;  KEY[2]     ; CLOCK_50   ; -2.265 ; -2.265 ; Fall       ; CLOCK_50        ;
+;  KEY[3]     ; CLOCK_50   ; -2.150 ; -2.150 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]  ; CLOCK_50   ; -1.530 ; -1.530 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0] ; CLOCK_50   ; -1.656 ; -1.656 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1] ; CLOCK_50   ; -1.685 ; -1.685 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2] ; CLOCK_50   ; -1.530 ; -1.530 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3] ; CLOCK_50   ; -1.543 ; -1.543 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4] ; CLOCK_50   ; -1.565 ; -1.565 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5] ; CLOCK_50   ; -1.561 ; -1.561 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6] ; CLOCK_50   ; -1.569 ; -1.569 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7] ; CLOCK_50   ; -1.564 ; -1.564 ; Fall       ; CLOCK_50        ;
+; SW[*]       ; CLOCK_50   ; 0.666  ; 0.666  ; Fall       ; CLOCK_50        ;
+;  SW[0]      ; CLOCK_50   ; 0.312  ; 0.312  ; Fall       ; CLOCK_50        ;
+;  SW[1]      ; CLOCK_50   ; 0.194  ; 0.194  ; Fall       ; CLOCK_50        ;
+;  SW[2]      ; CLOCK_50   ; 0.310  ; 0.310  ; Fall       ; CLOCK_50        ;
+;  SW[3]      ; CLOCK_50   ; 0.566  ; 0.566  ; Fall       ; CLOCK_50        ;
+;  SW[4]      ; CLOCK_50   ; 0.666  ; 0.666  ; Fall       ; CLOCK_50        ;
+;  SW[5]      ; CLOCK_50   ; 0.517  ; 0.517  ; Fall       ; CLOCK_50        ;
+;  SW[6]      ; CLOCK_50   ; 0.606  ; 0.606  ; Fall       ; CLOCK_50        ;
+;  SW[7]      ; CLOCK_50   ; 0.225  ; 0.225  ; Fall       ; CLOCK_50        ;
+;  SW[8]      ; CLOCK_50   ; 0.539  ; 0.539  ; Fall       ; CLOCK_50        ;
+;  SW[9]      ; CLOCK_50   ; 0.288  ; 0.288  ; Fall       ; CLOCK_50        ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 10.689 ; 10.689 ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 9.140  ; 9.140  ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 9.289  ; 9.289  ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 10.353 ; 10.353 ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 10.689 ; 10.689 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 10.141 ; 10.141 ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 10.342 ; 10.342 ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 9.646  ; 9.646  ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 9.982  ; 9.982  ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 9.982  ; 9.982  ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 9.604  ; 9.604  ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 9.572  ; 9.572  ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 9.614  ; 9.614  ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 9.624  ; 9.624  ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 9.946  ; 9.946  ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 9.871  ; 9.871  ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 9.764  ; 9.764  ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 8.925  ; 8.925  ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 8.570  ; 8.570  ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 8.971  ; 8.971  ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 8.581  ; 8.581  ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 8.671  ; 8.671  ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 8.340  ; 8.340  ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 9.136  ; 9.136  ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 9.764  ; 9.764  ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 8.649  ; 8.649  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 7.223  ; 7.223  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 7.232  ; 7.232  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 7.211  ; 7.211  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 7.208  ; 7.208  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 6.940  ; 6.940  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 8.319  ; 8.319  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 8.582  ; 8.582  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 8.649  ; 8.649  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 8.289  ; 8.289  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 8.257  ; 8.257  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 7.995  ; 7.995  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 8.003  ; 8.003  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 7.715  ; 7.715  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 7.672  ; 7.672  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 7.764  ; 7.764  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 6.891  ; 6.891  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 6.915  ; 6.915  ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 6.898  ; 6.898  ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 7.401  ; 7.401  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 7.167  ; 7.167  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 7.180  ; 7.180  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 7.170  ; 7.170  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 7.175  ; 7.175  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 6.900  ; 6.900  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 6.888  ; 6.888  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 7.179  ; 7.179  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 7.185  ; 7.185  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 7.148  ; 7.148  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 7.146  ; 7.146  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 7.130  ; 7.130  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 6.867  ; 6.867  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 6.885  ; 6.885  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 7.142  ; 7.142  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 7.159  ; 7.159  ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 7.401  ; 7.401  ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 7.411  ; 7.411  ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 7.455  ; 7.455  ; Fall       ; CLOCK_50        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; HEX0[*]        ; CLOCK_50   ; 4.564 ; 4.564 ; Fall       ; CLOCK_50        ;
+;  HEX0[0]       ; CLOCK_50   ; 4.564 ; 4.564 ; Fall       ; CLOCK_50        ;
+;  HEX0[1]       ; CLOCK_50   ; 4.648 ; 4.648 ; Fall       ; CLOCK_50        ;
+;  HEX0[2]       ; CLOCK_50   ; 4.887 ; 4.887 ; Fall       ; CLOCK_50        ;
+;  HEX0[3]       ; CLOCK_50   ; 5.035 ; 5.035 ; Fall       ; CLOCK_50        ;
+;  HEX0[4]       ; CLOCK_50   ; 4.810 ; 4.810 ; Fall       ; CLOCK_50        ;
+;  HEX0[5]       ; CLOCK_50   ; 4.898 ; 4.898 ; Fall       ; CLOCK_50        ;
+;  HEX0[6]       ; CLOCK_50   ; 4.794 ; 4.794 ; Fall       ; CLOCK_50        ;
+; HEX1[*]        ; CLOCK_50   ; 4.587 ; 4.587 ; Fall       ; CLOCK_50        ;
+;  HEX1[0]       ; CLOCK_50   ; 4.747 ; 4.747 ; Fall       ; CLOCK_50        ;
+;  HEX1[1]       ; CLOCK_50   ; 4.587 ; 4.587 ; Fall       ; CLOCK_50        ;
+;  HEX1[2]       ; CLOCK_50   ; 4.588 ; 4.588 ; Fall       ; CLOCK_50        ;
+;  HEX1[3]       ; CLOCK_50   ; 4.599 ; 4.599 ; Fall       ; CLOCK_50        ;
+;  HEX1[4]       ; CLOCK_50   ; 4.606 ; 4.606 ; Fall       ; CLOCK_50        ;
+;  HEX1[5]       ; CLOCK_50   ; 4.756 ; 4.756 ; Fall       ; CLOCK_50        ;
+;  HEX1[6]       ; CLOCK_50   ; 4.698 ; 4.698 ; Fall       ; CLOCK_50        ;
+; LEDG[*]        ; CLOCK_50   ; 4.362 ; 4.362 ; Fall       ; CLOCK_50        ;
+;  LEDG[0]       ; CLOCK_50   ; 4.578 ; 4.578 ; Fall       ; CLOCK_50        ;
+;  LEDG[1]       ; CLOCK_50   ; 4.472 ; 4.472 ; Fall       ; CLOCK_50        ;
+;  LEDG[2]       ; CLOCK_50   ; 4.602 ; 4.602 ; Fall       ; CLOCK_50        ;
+;  LEDG[3]       ; CLOCK_50   ; 4.468 ; 4.468 ; Fall       ; CLOCK_50        ;
+;  LEDG[4]       ; CLOCK_50   ; 4.495 ; 4.495 ; Fall       ; CLOCK_50        ;
+;  LEDG[5]       ; CLOCK_50   ; 4.362 ; 4.362 ; Fall       ; CLOCK_50        ;
+;  LEDG[6]       ; CLOCK_50   ; 4.639 ; 4.639 ; Fall       ; CLOCK_50        ;
+;  LEDG[7]       ; CLOCK_50   ; 4.880 ; 4.880 ; Fall       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[0]  ; CLOCK_50   ; 3.912 ; 3.912 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[1]  ; CLOCK_50   ; 3.916 ; 3.916 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[2]  ; CLOCK_50   ; 3.904 ; 3.904 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[3]  ; CLOCK_50   ; 3.900 ; 3.900 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[4]  ; CLOCK_50   ; 3.804 ; 3.804 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[5]  ; CLOCK_50   ; 4.314 ; 4.314 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[6]  ; CLOCK_50   ; 4.409 ; 4.409 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[7]  ; CLOCK_50   ; 4.447 ; 4.447 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[8]  ; CLOCK_50   ; 4.284 ; 4.284 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[9]  ; CLOCK_50   ; 4.269 ; 4.269 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[10] ; CLOCK_50   ; 4.167 ; 4.167 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[11] ; CLOCK_50   ; 4.181 ; 4.181 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[12] ; CLOCK_50   ; 4.073 ; 4.073 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[13] ; CLOCK_50   ; 4.083 ; 4.083 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[14] ; CLOCK_50   ; 4.104 ; 4.104 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[15] ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[16] ; CLOCK_50   ; 3.784 ; 3.784 ; Fall       ; CLOCK_50        ;
+;  SRAM_ADDR[17] ; CLOCK_50   ; 3.776 ; 3.776 ; Fall       ; CLOCK_50        ;
+; SRAM_DQ[*]     ; CLOCK_50   ; 3.750 ; 3.750 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[0]    ; CLOCK_50   ; 3.879 ; 3.879 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[1]    ; CLOCK_50   ; 3.890 ; 3.890 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[2]    ; CLOCK_50   ; 3.878 ; 3.878 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[3]    ; CLOCK_50   ; 3.886 ; 3.886 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[4]    ; CLOCK_50   ; 3.778 ; 3.778 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[5]    ; CLOCK_50   ; 3.773 ; 3.773 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[6]    ; CLOCK_50   ; 3.881 ; 3.881 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[7]    ; CLOCK_50   ; 3.888 ; 3.888 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[8]    ; CLOCK_50   ; 3.857 ; 3.857 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[9]    ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[10]   ; CLOCK_50   ; 3.844 ; 3.844 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[11]   ; CLOCK_50   ; 3.750 ; 3.750 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[12]   ; CLOCK_50   ; 3.768 ; 3.768 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[13]   ; CLOCK_50   ; 3.855 ; 3.855 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[14]   ; CLOCK_50   ; 3.865 ; 3.865 ; Fall       ; CLOCK_50        ;
+;  SRAM_DQ[15]   ; CLOCK_50   ; 3.945 ; 3.945 ; Fall       ; CLOCK_50        ;
+; SRAM_OE_N      ; CLOCK_50   ; 3.955 ; 3.955 ; Fall       ; CLOCK_50        ;
+; SRAM_WE_N      ; CLOCK_50   ; 3.989 ; 3.989 ; Fall       ; CLOCK_50        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 4.635 ;    ;    ; 4.635 ;
+; SW[1]      ; LEDR[1]     ; 4.978 ;    ;    ; 4.978 ;
+; SW[2]      ; LEDR[2]     ; 5.387 ;    ;    ; 5.387 ;
+; SW[3]      ; LEDR[3]     ; 5.682 ;    ;    ; 5.682 ;
+; SW[4]      ; LEDR[4]     ; 5.692 ;    ;    ; 5.692 ;
+; SW[5]      ; LEDR[5]     ; 5.186 ;    ;    ; 5.186 ;
+; SW[6]      ; LEDR[6]     ; 5.520 ;    ;    ; 5.520 ;
+; SW[7]      ; LEDR[7]     ; 6.692 ;    ;    ; 6.692 ;
+; SW[8]      ; HEX2[0]     ; 5.288 ;    ;    ; 5.288 ;
+; SW[8]      ; HEX2[3]     ; 5.342 ;    ;    ; 5.342 ;
+; SW[8]      ; HEX2[4]     ; 5.332 ;    ;    ; 5.332 ;
+; SW[8]      ; HEX2[5]     ; 5.322 ;    ;    ; 5.322 ;
+; SW[8]      ; LEDR[8]     ; 6.338 ;    ;    ; 6.338 ;
+; SW[9]      ; HEX3[0]     ; 5.344 ;    ;    ; 5.344 ;
+; SW[9]      ; HEX3[3]     ; 4.958 ;    ;    ; 4.958 ;
+; SW[9]      ; HEX3[4]     ; 4.968 ;    ;    ; 4.968 ;
+; SW[9]      ; HEX3[5]     ; 5.345 ;    ;    ; 5.345 ;
+; SW[9]      ; LEDR[9]     ; 6.400 ;    ;    ; 6.400 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDR[0]     ; 2.289 ;    ;    ; 2.289 ;
+; SW[1]      ; LEDR[1]     ; 2.423 ;    ;    ; 2.423 ;
+; SW[2]      ; LEDR[2]     ; 2.611 ;    ;    ; 2.611 ;
+; SW[3]      ; LEDR[3]     ; 2.778 ;    ;    ; 2.778 ;
+; SW[4]      ; LEDR[4]     ; 2.790 ;    ;    ; 2.790 ;
+; SW[5]      ; LEDR[5]     ; 2.537 ;    ;    ; 2.537 ;
+; SW[6]      ; LEDR[6]     ; 2.659 ;    ;    ; 2.659 ;
+; SW[7]      ; LEDR[7]     ; 3.248 ;    ;    ; 3.248 ;
+; SW[8]      ; HEX2[0]     ; 2.599 ;    ;    ; 2.599 ;
+; SW[8]      ; HEX2[3]     ; 2.651 ;    ;    ; 2.651 ;
+; SW[8]      ; HEX2[4]     ; 2.640 ;    ;    ; 2.640 ;
+; SW[8]      ; HEX2[5]     ; 2.630 ;    ;    ; 2.630 ;
+; SW[8]      ; LEDR[8]     ; 3.013 ;    ;    ; 3.013 ;
+; SW[9]      ; HEX3[0]     ; 2.643 ;    ;    ; 2.643 ;
+; SW[9]      ; HEX3[3]     ; 2.471 ;    ;    ; 2.471 ;
+; SW[9]      ; HEX3[4]     ; 2.476 ;    ;    ; 2.476 ;
+; SW[9]      ; HEX3[5]     ; 2.645 ;    ;    ; 2.645 ;
+; SW[9]      ; LEDR[9]     ; 3.058 ;    ;    ; 3.058 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 0        ; 0        ; 0        ; 261      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 0        ; 0        ; 0        ; 261      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 22    ; 22   ;
+; Unconstrained Input Port Paths  ; 224   ; 224  ;
+; Unconstrained Output Ports      ; 76    ; 76   ;
+; Unconstrained Output Port Paths ; 128   ; 128  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sun Oct 01 14:34:56 2017
+Info: Command: quartus_sta Projeto_Base -c Projeto_Base
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Projeto_Base.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.251
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.251       -57.999 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -72.507 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.357
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.357        -1.481 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -59.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 313 megabytes
+    Info: Processing ended: Sun Oct 01 14:34:57 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
