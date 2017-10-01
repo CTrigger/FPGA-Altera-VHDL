@@ -1,3 +1,8 @@
+-- Created by Ricardo Kim, Engineering student.
+-- Special Thanks to my teacher Renato Giacomini
+-- Check the video demonstration at https://youtu.be/ubPjrXpGXco
+-- The FPGA board in the video is property of Sao Judas Tadeu University, (So i'm accepting donations ALTERA ;) )
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
